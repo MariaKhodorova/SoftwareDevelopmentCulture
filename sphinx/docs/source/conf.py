@@ -6,10 +6,10 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'course_assembly'
-copyright = '2025, Кравцова Юлия'
-author = 'Кравцова Юлия'
-release = '1.0'
+project = 'course'
+copyright = '2025, Yulia'
+author = 'Yulia'
+release = '2.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
