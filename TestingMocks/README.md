@@ -8,7 +8,7 @@ issue: https://github.com/MariaKhodorova/SoftwareDevelopmentCulture/issues/11
     
     2. test_server_part.py - тесты к server_part.py
     
-Была реализована Кравцовой Юлией
+Была реализована Кравцовой Юлией (ветка server_part)
 
 Клиентская часть (папка client):
 
@@ -16,7 +16,7 @@ issue: https://github.com/MariaKhodorova/SoftwareDevelopmentCulture/issues/11
     
     2. test_cli_client.py - тесты к cli_client.py
     
-Была реализована Ходоровой Марией
+Была реализована Ходоровой Марией (ветка cli_client)
 
 
 
