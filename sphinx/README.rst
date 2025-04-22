@@ -128,3 +128,47 @@
    sudo apt install latexmk
    sudo apt install texlive-lang-cyrillic
    make latexpdf
+
+Тестирование бота
+-----------------
+
+Для того, чтобы сервер был доступен снаружи, мы можем разместить его на виртуальном сервере. 
+
+Вам нужно знать пароль и IP адрес сервера:
+
+Подключаемся:
+
+.. code-block:: bash
+
+
+       artem@pc:~$ ssh admin@62.109.28.99
+           admin@62.109.28.99's password: YOUR_PASSWORD_HERE
+
+           Welcome to Ubuntu 22.04 LTS (GNU/Linux 5.15.0-126-generic x86_64)
+
+           * Documentation:  https://help.ubuntu.com
+           * Management:     https://landscape.canonical.com
+           * Support:        https://ubuntu.com/advantage
+           New release '24.04.2 LTS' available.
+           Run 'do-release-upgrade' to upgrade to it.
+
+           Last login: Thu Mar 20 08:00:05 2025 from 188.162.250.239
+
+Создаем и активируем виртуальное окружение для проекта:
+
+.. code-block:: bash
+
+       admin@iot-reg:~# python3 -m venv ~/iot-regestration-server
+       admin@iot-reg:~# source ~/iot-regestration-server/bin/activate
+
+Переходим в папку с кодом сервера, устанавливаем зависимости и запускаем:
+
+.. code-block:: bash
+
+           (iot-regestration-server) admin@iot-reg:~# cd educational_materials/iot_api_server/src/iot_regestration_server/
+           (iot-regestration-server) admin@iot-reg:~# pip install -r requirements.txt
+           (iot-regestration-server) admin@iot-reg:~# uvicorn main:app --host 0.0.0.0 --port 8000
+               INFO:     Started server process [111597]
+               INFO:     Waiting for application startup.
+               INFO:     Application startup complete.
+               INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
